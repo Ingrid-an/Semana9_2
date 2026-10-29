@@ -7,10 +7,10 @@
 
 | Rol | Integrante | Responsabilidad |
 |---|---|---|
-| Arquitecto de Despliegue | *(nombre)* | Configuración XAMPP/Tomcat, rutas, puertos, logs |
+| Arquitecto de Despliegue | Ingrid Andrade | Configuración XAMPP/Tomcat, rutas, puertos, logs |
 | Desarrollador PHP | Ingrid Andrade | `$_POST`, validación, `session_start()`, `htmlspecialchars` |
-| Desarrollador JSP | *(nombre)* | `request.getParameter()`, session, JSTL / web.xml |
-| QA & Documentador | *(nombre)* | Pruebas HTTP, validación de seguridad, matriz comparativa, README |
+| Desarrollador JSP | Ingrid Andrade | `request.getParameter()`, session, JSTL / web.xml |
+| QA & Documentador | Ingrid Andrade | Pruebas HTTP, validación de seguridad, matriz comparativa, README |
 
 ---
 
@@ -23,7 +23,6 @@ lab09-grupal/
 │   └── registro.php            valida, guarda en $_SESSION y muestra tabla
 ├── jsp-app/                    → copiar a Tomcat/webapps/
 │   ├── index.jsp               formulario de contacto
-│   ├── registro.jsp            versión con JSTL (<c:forEach> + <c:out>)
 │   ├── registro-scriptlet.jsp  versión alterna sin JSTL (plan B)
 │   └── WEB-INF/
 │       └── web.xml
