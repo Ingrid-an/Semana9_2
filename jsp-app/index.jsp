@@ -1,0 +1,75 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Contacto · JSP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        font-family: "Poppins", sans-serif; min-height: 100vh;
+        display: flex; align-items: center; justify-content: center; padding: 1.5rem;
+        background: linear-gradient(135deg, #7f1d1d 0%, #be123c 50%, #fb7185 100%);
+      }
+      .tarjeta {
+        background: #fff; width: 100%; max-width: 440px; border-radius: 20px;
+        padding: 2.5rem; box-shadow: 0 25px 60px -15px rgba(0,0,0,.4); animation: aparecer .5s ease;
+      }
+      @keyframes aparecer { from { opacity:0; transform: translateY(20px);} to {opacity:1; transform:translateY(0);} }
+      .icono {
+        width: 64px; height: 64px; margin: 0 auto 1rem;
+        background: linear-gradient(135deg, #be123c, #fb7185); border-radius: 50%;
+        display: flex; align-items: center; justify-content: center; font-size: 2rem;
+      }
+      h1 { text-align: center; font-size: 1.4rem; color: #1e293b; font-weight: 700; }
+      .sub { text-align: center; color: #94a3b8; font-size: .85rem; margin: .35rem 0 1.75rem; }
+      .tag {
+        display: inline-block; background: #ffe4e6; color: #be123c; font-size: .7rem;
+        font-weight: 600; padding: .2rem .7rem; border-radius: 999px; margin-bottom: .75rem;
+      }
+      .campo { margin-bottom: 1.1rem; }
+      label { display: block; font-size: .82rem; font-weight: 500; color: #475569; margin-bottom: .35rem; }
+      input, textarea {
+        width: 100%; padding: .8rem .9rem; border: 2px solid #e2e8f0; border-radius: 12px;
+        font-size: .95rem; font-family: inherit; transition: border-color .2s, box-shadow .2s; outline: none; resize: vertical;
+      }
+      input:focus, textarea:focus { border-color: #be123c; box-shadow: 0 0 0 4px rgba(190,18,60,.12); }
+      button {
+        width: 100%; margin-top: .5rem; padding: .9rem; border: none; border-radius: 12px;
+        background: linear-gradient(135deg, #be123c, #9f1239); color: #fff; font-family: inherit;
+        font-weight: 600; font-size: .98rem; cursor: pointer; transition: transform .15s, box-shadow .2s;
+      }
+      button:hover { transform: translateY(-2px); box-shadow: 0 10px 25px -8px rgba(190,18,60,.6); }
+      .pie { text-align: center; margin-top: 1.5rem; font-size: .75rem; color: #cbd5e1; }
+    </style>
+  </head>
+  <body>
+    <div class="tarjeta">
+      <div class="icono">📇</div>
+      <div style="text-align:center"><span class="tag">SERVIDOR JSP · TOMCAT</span></div>
+      <h1>Registro de Contacto</h1>
+      <p class="sub">Los contactos se guardan en la sesión del servidor</p>
+
+      <form action="registro-scriptlet.jsp" method="POST">
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ingrid Andrade" required />
+        </div>
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="ingrid@uncp.edu.pe" required />
+        </div>
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="3" placeholder="Escribe tu mensaje..." required></textarea>
+        </div>
+        <button type="submit">Registrar contacto →</button>
+      </form>
+
+      <p class="pie">Laboratorio 09 Grupal · Desarrollo de Aplicaciones Web (IS093A)</p>
+    </div>
+  </body>
+</html>
